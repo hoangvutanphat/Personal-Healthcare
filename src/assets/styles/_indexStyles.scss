@@ -1,0 +1,135 @@
+.content-blood-container {
+  width: 100%;
+  min-height: 726px;
+  background: $pastel-green;
+  .content-info-result {
+    position: relative;
+    padding-top: 80px !important;
+    // height: 100%;
+    min-height: 726px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    .chart-index-container {
+      @include flex-column-center();
+      gap: 34px;
+      min-height: 673px;
+      width: 100%;
+      background: $white;
+      box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.24);
+      position: absolute;
+      top: 504px;
+      width: 100%;
+      padding: 80px;
+      .chart-index-wrap {
+        width: 100%;
+        height: 100%;
+        .chart-index-header {
+          @include flex-between();
+          width: 100%;
+          margin-bottom: 40px;
+          &__title {
+            height: 28px;
+            @include font-family-workSans();
+            @include font-style(24px, 600, $light-black);
+            line-height: 28px;
+            letter-spacing: -0.04em;
+          }
+          &__times {
+            @include flex-item-center();
+            padding: 0px;
+            gap: 24px;
+            height: 30px;
+            .more-horizontal {
+              @include flex-item-center();
+              padding: 8px;
+              gap: 10px;
+              width: 30px;
+              height: 30px;
+              background: $white;
+              border: 1px solid $primary-background;
+              border-radius: 4px;
+            }
+          }
+        }
+        // .question-wrapper {
+        //   display: flex;
+        //   flex-direction: column;
+        // }
+      }
+      .bottom-container {
+        position: absolute;
+        bottom: -3%;
+      }
+    }
+  }
+}
+.recommendations-container {
+  height: 729px;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 80px !important;
+}
+.blood-pressure-wrapper {
+  background: #fcf7f3;
+  @include flex-column-item-center();
+  gap: 40px;
+  width: 100%;
+  padding-bottom: 160px;
+  .tbl-blood-pressure {
+    height: 100%;
+    .tbl-blood-header {
+      @include flex-between();
+      padding: 0px;
+      gap: 40px;
+      width: 100%;
+      height: 75px;
+      margin-top: 80px;
+      margin-bottom: 40px;
+      h1 {
+        width: 934px;
+        @include font-family-workSans();
+        @include font-style(64px, 500, $color-900);
+        line-height: 75px;
+        letter-spacing: -0.04em;
+      }
+      &__download {
+        @include flex-item-center();
+        padding: 0px;
+        gap: 16px;
+        height: 16px;
+        cursor: pointer;
+        p {
+          height: 14px;
+          @include font-family-workSans();
+          @include font-style(12px, 600, $color-900);
+          line-height: 14px;
+          text-decoration-line: underline;
+        }
+      }
+    }
+    .tbl-blood-content {
+      @include flex-column-start();
+      padding: 40px 40px 80px;
+      gap: 1px;
+      isolation: isolate;
+      width: 100%;
+      // height: 420px;
+      background: $white;
+      box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.24);
+      position: relative;
+      margin-bottom: 160px;
+      &__table {
+        width: 100%;
+      }
+      .tbl-blood-button {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 50%);
+        cursor: pointer;
+      }
+    }
+  }
+}

@@ -1,0 +1,61 @@
+
+// .text-muted{
+//     color: #7987a1!important;
+//     font-weight: 500!important;
+// }
+.full-page-login{
+    background-color: #f9fafb;
+    min-height: 100vh !important;
+
+    .login-form {
+        max-width: 300px;
+        margin   : 0 auto !important;
+      }
+
+    .ant-input-affix-wrapper{
+        border: 0px;
+        border-bottom: 2.5px solid rgb(194, 194, 194);
+    }
+    // .login-form-icon{
+    //     color:rgb(194, 194, 194)
+    // }
+    .ant-input-affix-wrapper:hover,
+    .ant-input-affix-wrapper-focused{
+        border: 0px;
+        border-bottom: 2.5px solid $accents-verdepom;
+
+        .login-form-icon{
+            color: $accents-verdepom;
+        }
+        // input::-webkit-input-placeholder {
+        //     color: $accents-verdepom;
+        //     font-size: 14px;
+        //     transform: translateY(-20px);
+        //     visibility: visible !important;
+        //     z-index: 999;
+        //   }
+    }
+    .login-form-button{
+        background-color: $accents-verdepom;
+        border-color: $accents-verdepom;
+    }
+    .form-wrapper{
+        padding: 70px
+    }
+    .login-form-link{
+        color: $accents-verdepom;
+    }
+
+    // input::-webkit-input-placeholder, 
+    // button, 
+    // .ant-input-affix-wrapper,
+    // .ant-input-affix-wrapper-focused {
+    //     transition: all 0.3s ease-in-out;
+    //   }
+
+    //   input{
+    //     height: 50px
+    //   }
+
+    
+}

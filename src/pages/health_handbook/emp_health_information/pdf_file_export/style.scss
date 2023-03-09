@@ -1,0 +1,108 @@
+@import "../../../../assets/styles/variables";
+@import "../../../../assets/styles/mixins";
+
+.content-box {
+  padding: 80px 0;
+
+  .filter {
+    min-height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 32px;
+
+    .date {
+      flex-grow: 1;
+      width: 300px;
+      p {
+        @include font-style(16px, 400, $color-700);
+        line-height: 19px;
+      }
+      .ant-picker {
+        border: none;
+        border-bottom: 1px solid $grey-4;
+        background: transparent;
+        width: 100%;
+
+        .ant-picker-input input {
+          @include font-style(14px, 600, $color-900);
+          line-height: 16px;
+          padding-bottom: 8px;
+        }
+      }
+    }
+
+    .download {
+      flex-grow: 0;
+      padding: 16px 24px;
+      background: $primary-default;
+      border-radius: 100px;
+      cursor: pointer;
+      p {
+        @include font-style(16px, 600, $white);
+        line-height: 19px;
+      }
+    }
+  }
+  .overview-box {
+    padding: 40px;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.24);
+
+    .title {
+      @include font-style(24px, 600, $light-black);
+    }
+    .chart-box {
+      padding: 0 40px;
+    }
+    .double-chart {
+      padding: 0;
+    }
+    .double-chart.border-right {
+      padding-right: 34px;
+      border-right: 1px solid #dde1dd;
+    }
+    .table-box {
+      padding: 40px;
+      border: 1px solid $color-400;
+    }
+    .ant-divider-horizontal {
+      margin: 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .content-box {
+    .emp-profile {
+      p {
+        font-size: 16px;
+        line-height: 20px;
+      }
+      h1 {
+        font-size: 32px;
+        line-height: 35px;
+      }
+    }
+    .filter {
+      .date {
+        width: 200px;
+      }
+    }
+    .overview-box {
+      padding: 40px 20px;
+      .chart-box,
+      .double-chart {
+        padding: 0 20px;
+      }
+      .double-chart.border-right {
+        padding-right: 0;
+        border-right: none;
+      }
+      .table-box {
+        padding: 20px;
+      }
+    }
+  }
+}

@@ -1,0 +1,55 @@
+@import "../../../../assets/styles/variables";
+@import "../../../../assets/styles/mixins";
+.wrapper-list {
+  // position: absolute;
+  width: 1920px;
+  left: 0px;
+  top: 572px;
+  background: $pastel-orange;
+  padding-top: 294px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &-h1 {
+    width: 1140px;
+    height: 59px;
+    margin-left: 390px;
+  }
+  &-filter {
+    width: 1140px;
+    height: 152px;
+    background: $white;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.24);
+  }
+}
+.title-h6 {
+  h6 {
+    @include font-family-workSans();
+    @include font-style(18px,600,$secondary-default);
+    line-height: 21px;
+    letter-spacing: -0.04em;
+  }
+}
+.btn-filter {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: $primary-default;
+  border-radius: 100px;
+  width: 75px;
+  height: 59px;
+  @include font-family-workSans();
+  @include font-style(16px,600,$white);
+  line-height: 19px;
+  letter-spacing: -0.04em;
+}
+.row2 {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.form {
+  margin: 24px 24px;
+}
+

@@ -1,0 +1,31 @@
+.chart-info {
+  @include flex-center();
+  padding: 34px 0 0;
+
+  .name {
+    @include font-style(16px, 400, $color-700);
+    line-height: 19px;
+  }
+  .line {
+    height: 4px;
+    border-radius: 100px;
+  }
+  .green-line {
+    background: #6eda69;
+  }
+  .blue-line {
+    background: #2f80ed;
+  }
+  .red-line {
+    background: #ff3f3c;
+  }
+  .purple-line {
+    background: #9b51e0;
+  }
+  .orange-line {
+    background: #f2994a;
+  }
+  .violet-line{
+    background: #634269;
+  }
+}

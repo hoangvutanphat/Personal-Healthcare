@@ -1,0 +1,107 @@
+.item-index-wrapper {
+  position: relative;
+  padding: 24px 18px;
+  // isolation: isolate;
+  width: 16%;
+
+  /* White Theme / Gray - 0 */
+
+  background: #ffffff;
+  box-shadow: 0px 100px 309px rgba(210, 208, 225, 0.24),
+    0px 41.7776px 129.093px rgba(210, 208, 225, 0.172525),
+    0px 22.3363px 69.0192px rgba(210, 208, 225, 0.143066),
+    0px 12.5216px 38.6916px rgba(210, 208, 225, 0.12),
+    0px 6.6501px 20.5488px rgba(210, 208, 225, 0.0969343),
+    0px 2.76726px 8.55082px rgba(210, 208, 225, 0.0674749);
+  border-radius: 12px;
+  overflow: hidden;
+
+  .item-index-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    gap: 15px;
+    width: 100%;
+    &__title {
+      height: 50px;
+      &--index {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        /* or 114% */
+        /* 900 (Title) */
+
+        color: #1b211a;
+      }
+      &--name {
+        font-family: "Work Sans";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 18.77px;
+        /* or 114% */
+        /* 900 (Title) */
+        color: #1b211a;
+      }
+    }
+    &__unit {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-end;
+      padding: 0px;
+      gap: 9px;
+
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 12px;
+      /* identical to box height, or 90% */
+
+      /* Primary/Default */
+
+      color: #4ad143;
+      span {
+        width: 43px;
+        height: 14px;
+
+        /* Caption/Bold */
+
+        font-family: "Work Sans";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 14px;
+        /* identical to box height */
+
+        /* 900 (Title) */
+
+        color: #1b211a;
+      }
+    }
+    &__image {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 8px;
+      gap: 10px;
+
+      width: 48px;
+      height: 48px;
+
+      /* Primary/Background */
+
+      background: #f1f9f0;
+      border-radius: 100px;
+      cursor: pointer;
+    }
+  }
+  .iten-chart-container {
+    width: 173px;
+    height: 97px;
+    margin-left: -35px;
+  }
+}

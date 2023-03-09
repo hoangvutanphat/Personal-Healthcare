@@ -1,0 +1,75 @@
+.other-medical-consultation {
+  width: 100%;
+  .search-disease {
+    padding: 32px 24px;
+    width: 100%;
+    height: 248px;
+
+    background: #ffffff;
+    /* Shadow */
+
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.24);
+    .title-search {
+      width: 379px;
+      height: 21px;
+
+      /* H6 */
+
+      font-family: "Work Sans";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 21px;
+      letter-spacing: -0.04em;
+
+      /* 900 (Title) */
+
+      color: #1b211a;
+      margin-bottom: 16px;
+    }
+    .select-disease {
+      margin-bottom: 30px;
+      .ant-select:not(.ant-select-customize-input) .ant-select-selector {
+        border: none;
+        border-bottom: 1px solid grey;
+      }
+    }
+    .input-search {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      padding: 24px;
+      gap: 24px;
+
+      width: 521.5px;
+      /* 5 */
+      background: #f8f8f8;
+      border-radius: 1000px;
+      input {
+        border: none;
+        outline: none;
+        width: 100%;
+        background: #f8f8f8;
+        font-size: 14px;
+      }
+      input::placeholder {
+        /* Big body/Bold */
+
+        font-family: "Work Sans";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 21px;
+        letter-spacing: -0.04em;
+
+        /* 400 */
+
+        color: #b5bdb4;
+      }
+    }
+  }
+  .medical-consultation-content {
+    margin-top: 50px;
+  }
+}

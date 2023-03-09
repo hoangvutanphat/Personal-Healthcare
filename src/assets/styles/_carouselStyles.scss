@@ -1,0 +1,63 @@
+.page-banner {
+    position: relative;
+    .pre-btn,
+    .next-btn {
+        width: 70px;
+        height: 70px;
+        background: rgba(110, 117, 108, 0.68);
+        border: none;
+        color: $color-400;
+        &:hover {
+            color: $white;
+            background: #9ba19a;
+        }
+    }
+    .ant-btn-icon-only * {
+        font-size: 2rem;
+        font-weight: 600;
+        // @include font-style(2rem, 600, $color-400);
+    }
+}
+.pre-btn {
+    position: absolute;
+    top: 50%;
+    left: 42px;
+    transform: translate(0, -50%);
+}
+
+.next-btn {
+    position: absolute;
+    top: 50%;
+    right: 42px;
+    transform: translate(0, -50%);
+}
+
+.ant-carousel .slick-dots li button {
+    display: none;
+}
+
+.carousel {
+    position: relative;
+    &__pagination {
+        position: absolute;
+        bottom: 50px;
+        right: 42px;
+        z-index: 100;
+        @include font-style(1rem, 600, $white);
+        letter-spacing: 0.5rem;
+        &-current {
+            @include font-style(3rem, 600, $primary-default);
+        }
+    }
+    &__img {
+        width: 100%;
+        object-fit: cover;
+    }
+    .card-box {
+        position: absolute;
+        top: 50%;
+        left: 20%;
+        transform: translate(0, -50%);
+        z-index: 100;
+    }
+}

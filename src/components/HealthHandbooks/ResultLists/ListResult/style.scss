@@ -1,0 +1,63 @@
+@import "../../../../assets/styles/variables";
+@import "../../../../assets/styles/mixins";
+.wrapper-list{
+    // position: absolute;
+    width: 1920px;
+    left: 0px;
+    top: 572px;
+    background: #FCF7F3;
+    padding-top: 294px;
+    @include flex-column-center;
+        &-title{
+        width: 1140px;
+        height: 59px;
+    }
+    &-fillter{
+        width: 1140px;
+        height: 152px;
+        background: #FFFFFF;
+        box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.24);
+    }
+}
+.title-h6{
+    h6{
+        @include font-style(18px,600,$secondary-default);
+        @include font-family-workSans();
+        line-height: 21px;
+        letter-spacing: -0.04em;
+    }
+}
+.btn-fillter{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: #4AD143;
+    border-radius: 100px;
+    width: 75px;
+    height: 59px;
+    p{
+        width: 27px;
+        height: 19px;
+        @include font-family-workSans();
+        @include font-style(16px,600,$white);
+        line-height: 19px;
+        letter-spacing: -0.04em;
+    }
+}
+.row2{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.form{
+    margin: 24px 24px;
+}
+.item{
+    width: 1140px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 24px;
+}

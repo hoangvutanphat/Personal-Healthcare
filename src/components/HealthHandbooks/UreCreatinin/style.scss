@@ -1,0 +1,60 @@
+@import "../../../assets/styles/variables";
+@import "../../../assets/styles/mixins";
+.modal-container.ant-modal-title {
+  width: 377px;
+  height: 28px;
+  @include font-family-workSans();
+  @include font-style(24px, 600, $secondary-default);
+  line-height: 28px;
+  letter-spacing: -0.04em;
+}
+.ant-tooltip-inner {
+  @include font-family-workSans();
+  @include font-style(12px, 400, $black);
+  line-height: 14px;
+}
+.form-label {
+  display: flex;
+  p {
+    height: 19px;
+    @include font-family-workSans();
+    @include font-style(16px, 400, $color-700);
+    line-height: 19px;
+    letter-spacing: -0.04em;
+    margin-right: 4px;
+  }
+  img {
+    cursor: pointer;
+  }
+}
+// .ant-form-item{
+//   border-bottom:1px solid #A9B7DB ;
+// }
+// .ant-modal-content{
+//   width: 489px;
+// height: 702px;
+
+// }
+.modal-container.ant-modal-header {
+  border: none;
+}
+.modal-container.ant-modal-footer {
+  border: none;
+}
+.input-modal {
+  display: flex;
+  flex-direction: row;
+  .ant-picker-focused {
+    box-shadow: none;
+    border: none;
+  }
+  .ant-picker {
+    border: none;
+  }
+  input {
+    border: none;
+  }
+  input:focus {
+    box-shadow: none;
+  }
+}

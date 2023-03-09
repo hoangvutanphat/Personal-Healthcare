@@ -1,0 +1,96 @@
+@import "../../../../assets/styles/variables";
+@import "../../../../assets/styles/mixins";
+.item-conterner{
+    margin-top: 40px;
+    @include flex-column-item-center();
+    width: 364px;
+    height: 403px;
+    &-img-top{
+        width: 364px;
+        height: 256px;
+        position: relative;
+
+    }
+    &-bottom{
+        position: absolute;
+        width: 332px;
+        background: $white;
+        margin-top: 190px;
+    }
+}
+.item-day{
+    padding: 24px;
+    &-title-day{
+    
+        &-item{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 29px;
+            padding: 4px 8px;   
+            background: $primary-default;
+            border-radius: 1000px;
+            h6{
+                height: 21px;
+                @include font-family-workSans();
+                @include font-style(18px,600,$white);
+                line-height: 21px;
+                letter-spacing: -0.04em;
+            }
+        }
+    }
+    &-hospital{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 24px;
+        gap: 8px;
+        &-icon{
+            height: 19px;
+           @include flex-column-start();
+        }
+        &-name{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 19px;
+
+            p{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                @include font-family-workSans();
+                @include font-style(16px,400,$color-700);
+                line-height: 19px;
+            }
+        }
+    }
+    &-bottom{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 24px;
+        width: 284px;
+        height: 48px;
+        &-dowload{
+            border: none;
+        }
+        &-btn{
+            border: none;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 8px;
+            gap: 10px;
+            width: 48px;
+            height: 48px;
+            background: $primary-background;
+            border-radius: 100px;
+        }
+    }
+}
+
+
+
+

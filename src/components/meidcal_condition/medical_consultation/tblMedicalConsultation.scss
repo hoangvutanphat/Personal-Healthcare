@@ -1,0 +1,105 @@
+.table-history {
+  display: flex;
+  width: 100%;
+  height: 230px;
+  margin-top: 16px;
+  .table-th {
+    width: 22%;
+    height: 230px;
+    p {
+      height: 22%;
+      padding: 8px;
+      width: 100%;
+      /* Pastel/Green */
+      border: 1px solid white;
+      border-collapse: collapse;
+      background: #f0faf0;
+      font-family: "Work Sans";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 19px;
+      display: flex;
+      align-items: center;
+
+      /* 900 (Title) */
+
+      color: #1b211a;
+      &:last-child {
+        height: 34%;
+      }
+    }
+  }
+  .carosel-wrapper {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    position: relative;
+    .ant-carousel {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      .slick-slider.slick-initialized {
+        width: 100%;
+        height: 100%;
+        .table-td {
+          width: 25%;
+          height: 230px;
+          p {
+            border: 1px solid white;
+            border-collapse: collapse;
+            padding: 8px;
+            height: 22%;
+            display: flex;
+            align-items: center;
+            /* 5 */
+            background: #f8f8f8;
+          }
+          .footer-table {
+            display: flex;
+            flex-direction: column;
+            border: 1px solid white;
+            border-collapse: collapse;
+            padding: 8px;
+            height: 34%;
+            display: flex;
+            align-items: center;
+            /* 5 */
+            background: #f8f8f8;
+            .btn-show {
+              padding: 4px 16px;
+              height: 32px;
+              width: 100%;
+              /* 15 (Line) */
+              margin-top: 5px;
+              background: #eef0f1;
+              border-radius: 100px;
+              cursor: pointer;
+              span {
+                font-family: "Work Sans";
+                font-style: normal;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 16px;
+                letter-spacing: -0.04em;
+
+                /* 900 (Title) */
+
+                color: #1b211a;
+              }
+              img {
+                width: 15px;
+                height: 15px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .btn-carosel-group {
+      position: absolute;
+      bottom: -30px;
+      left: 46%;
+    }
+  }
+}

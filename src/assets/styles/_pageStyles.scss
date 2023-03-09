@@ -1,0 +1,135 @@
+.page-container {
+  position: relative;
+
+  .id-top-banner {
+    width: 100%;
+    height: 726px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -10;
+  }
+
+  .pdf-top-banner {
+    width: 100%;
+    height: 829px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -10;
+  }
+
+  .top-content-box {
+    padding: 80px 0;
+    background: $pastel-green;
+
+    .chart-box {
+      padding: 80px;
+      box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.24);
+
+      .chart-header {
+        @include flex-between();
+        flex-wrap: wrap;
+        gap: 34px;
+
+        .title {
+          @include font-style(24px, 600, $light-black);
+        }
+        .select-title {
+          @include font-style(16px, 400, $light-black);
+        }
+      }
+    }
+
+    .chart-box.double-chart {
+      padding: 40px;
+    }
+
+    .form-box {
+      padding: 80px;
+      margin-bottom: 40px;
+      box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.24);
+
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+
+      position: relative;
+
+      .form-label-btn {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 50%);
+      }
+    }
+
+    .select-btn-group {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  .right-content-box {
+    background: $white;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.24);
+    border-radius: 24px;
+    margin: 60px 0;
+  }
+
+  .bot-content-box {
+    padding: 80px 0 160px;
+
+    .table-header {
+      @include flex-between();
+      flex-wrap: wrap;
+      gap: 34px;
+
+      .title {
+        @include font-style(64px, 500, $color-900);
+      }
+      .download-title {
+        @include font-style(12px, 600, $color-900);
+      }
+    }
+
+    .table-box {
+      padding: 40px 40px 80px;
+      position: relative;
+
+      .table-btn {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 50%);
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .page-container {
+    .top-content-box {
+      .chart-box {
+        padding: 40px 20px;
+      }
+      .chart-box.double-chart {
+        padding: 40px 20px;
+      }
+      .form-box {
+        padding: 40px 20px;
+      }
+    }
+    .bot-content-box {
+      .table-box {
+        padding: 20px 20px 40px;
+      }
+      .table-header {
+        .title {
+          font-size: 32px;
+        }
+      }
+    }
+  }
+}

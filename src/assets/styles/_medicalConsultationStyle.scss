@@ -1,0 +1,173 @@
+.text-white {
+  color: $white;
+}
+.border-none {
+  border: none !important;
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.my-4 {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.text-title-h1 {
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 64px;
+  line-height: 75px;
+  letter-spacing: -0.04em;
+
+  /* 900 (Title) */
+
+  color: #1b211a;
+  text-align: center;
+}
+.name-title {
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 64px;
+  line-height: 75px;
+  letter-spacing: -0.04em;
+
+  /* 900 (Title) */
+
+  color: #4ad143;
+}
+
+.disease-info-wrapper {
+  .html-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    h1,
+    h2,
+    h3 {
+      font-family: "Work Sans";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 32px;
+      line-height: 38px;
+      /* identical to box height */
+
+      letter-spacing: -0.04em;
+
+      /* Light / Black */
+
+      color: #11263c;
+      margin-top: 40px;
+      margin-bottom: 20px;
+    }
+    h2,
+    h1 {
+      strong {
+        font-family: "Work Sans";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 38px;
+        /* identical to box height */
+
+        letter-spacing: -0.04em;
+
+        /* Light / Black */
+
+        color: #11263c;
+        margin-top: 40px;
+        margin-bottom: 20px;
+      }
+    }
+    p,
+    li {
+      font-family: "Work Sans";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 30px;
+
+      /* 700 (Body text) */
+
+      color: #5a6159;
+    }
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      li {
+        list-style: circle;
+        margin-left: 20px;
+      }
+    }
+  }
+}
+.footer-pagination {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0px;
+  width: 100%;
+  height: 40px;
+  .ant-pagination.ant-pagination-mini .ant-pagination-prev,
+  .ant-pagination.ant-pagination-mini .ant-pagination-next {
+    height: unset;
+    margin-bottom: 5px;
+  }
+}
+
+.being-treated {
+  width: 100%;
+  height: 38px;
+  margin: 40px 0;
+
+  /* H1 */
+
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 38px;
+  /* identical to box height */
+
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.04em;
+
+  /* 900 (Title) */
+
+  color: #1b211a;
+}
+.medical-condition-container {
+  width: 100%;
+  padding: 30px 0;
+  position: relative;
+}
+.btn-medical-consultation {
+  width: 310px;
+  margin-top: 50px;
+  // position: absolute;
+  // top: -1.75%;
+}
+.medical_advice {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 100px 0;
+  width: 100%;
+  p {
+    width: 60%;
+    height: 150px;
+    @include font-family-workSans();
+    line-height: 75px;
+    text-align: center;
+    letter-spacing: -0.04em;
+    @include font-style(64px, 500, $color-900);
+    span {
+      color: #4ad143;
+    }
+  }
+}

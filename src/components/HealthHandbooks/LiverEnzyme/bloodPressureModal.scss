@@ -1,0 +1,30 @@
+@import "../../../assets/styles/mixins";
+@import "../../../assets/styles/variables";
+
+.modal-container.ant-modal-title {
+  width: 377px;
+  height: 28px;
+  @include font-family-workSans();
+  @include font-style(24px, 600, $color-900);
+  line-height: 28px;
+  letter-spacing: -0.04em;
+}
+.ant-tooltip-inner {
+  @include font-family-workSans();
+  @include font-style(12px, 400, $black !important);
+  line-height: 14px;
+}
+.form-label {
+  display: flex;
+  p {
+    height: 19px;
+    @include font-family-workSans();
+    @include font-style(16px, 400, $color-700);
+    line-height: 19px;
+    letter-spacing: -0.04em;
+    margin-right: 4px;
+  }
+  img {
+    cursor: pointer;
+  }
+}

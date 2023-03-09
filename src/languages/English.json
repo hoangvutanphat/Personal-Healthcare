@@ -1,0 +1,29 @@
+{
+  "general": {
+    "msgWelcome": "Chào mừng bạn đến với Novasquare",
+    "lblCopyright": "Bản quyền thuộc về",
+    "ipSearch": "Tìm kiếm",
+    "ctSelect": "Chọn Quốc gia",
+    "citySelect": "Chọn tỉnh/thành",
+    "dtSelect": "Chọn quận/huyện",
+    "mesDelete": "Bạn có chắc muốn xóa mục này?",
+    "cantRestore": "Bạn không thể khôi phục mục này!",
+    "button": {
+      "btnOk": "OK",
+      "btnOpen": "Open",
+      "btnCreate": "Create",
+      "btnUpdate": "Update",
+      "btnCancel": "Cancel",
+      "btnClose": "Close",
+      "btnEdit": "Edit",
+      "btnDelete": "Delete",
+      "btnSearch": "Search",
+      "btnViewMore": "View More",
+      "btnAdd": "Add",
+      "btnSend": "Send",
+      "btnContactUs": "Contact Us",
+      "btnTryNow": "Try Now",
+      "btnClear": "Clear"
+    }
+  }
+}

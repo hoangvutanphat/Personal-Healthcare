@@ -1,0 +1,130 @@
+.solutions {
+  .large-title {
+    padding-top: 50px;
+    padding-bottom: 20px;
+  }
+  &__banner {
+    position: relative;
+    .card-box {
+      position: absolute;
+      bottom: 0;
+      left: 20%;
+      z-index: 100;
+      transform: translate(0, 50%);
+    }
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  &__content {
+    background: $secondary-background;
+    position: relative;
+
+    &-title {
+      position: absolute;
+      top: 35px;
+      left: 52%;
+      h1 {
+        @include font-style(2rem, 500, $color-900);
+
+        line-height: 38px;
+        text-align: center;
+        letter-spacing: -0.04rem;
+      }
+    }
+
+    &-list {
+      @include flex-center();
+      padding: 175px 0 24px;
+      gap: 24px;
+
+      .list-select {
+        @include font-style(1rem, 600, $black);
+        line-height: 19px;
+        letter-spacing: -0.04em;
+
+        padding: 8px;
+        background: $primary-background;
+        border: 1px solid $black;
+        border-radius: 1000px;
+        cursor: pointer;
+        transition: all 0.3s;
+
+        &:hover,
+        &:active {
+          color: $white;
+          background: $primary-default;
+          border: 1px solid $primary-background;
+        }
+      }
+    }
+    &-tags {
+      padding: 16px 0 64px;
+      @include flex-center();
+      gap: 24px;
+      .tag {
+        @include font-style(1rem, 600, $black);
+        line-height: 19px;
+        letter-spacing: -0.04em;
+      }
+    }
+    &-link {
+      display: inline-block;
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translate(-50%, 50%);
+    }
+  }
+  .card-contents {
+    .card-blog {
+      padding: 12px 0;
+      .card-image {
+        object-fit: cover;
+      }
+      .card-infor {
+        .type {
+          @include font-style(12px, 600, $primary-dark);
+          line-height: 14px;
+          background: $primary-background;
+        }
+        .time {
+          @include font-style(12px, 400, $color-600);
+          line-height: 14px;
+        }
+      }
+      .card-title {
+        @include font-style(18px, 600, $color-900);
+        line-height: 20px;
+        height: 60px;
+
+        word-break: break-all;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        word-break: break-word;
+      }
+      .card-content {
+        @include font-style(16px, 400, $color-700);
+        line-height: 18px;
+        height: 54px;
+
+        word-break: break-all;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        word-break: break-word;
+      }
+      .card-link {
+        @include font-style(14px, 500, $primary-default);
+        line-height: 16px;
+        cursor: pointer;
+      }
+    }
+  }
+}

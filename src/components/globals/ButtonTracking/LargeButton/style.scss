@@ -1,0 +1,21 @@
+.select-btn.active {
+  background: #4ad143;
+  border: none;
+
+  p {
+    color: #ffffff;
+  }
+}
+.select-btn {
+  padding: 16px 24px;
+  height: 56px;
+  border: 1px solid #1b211a;
+  border-radius: 100px;
+  cursor: pointer;
+  p {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    color: #1b211a;
+  }
+}

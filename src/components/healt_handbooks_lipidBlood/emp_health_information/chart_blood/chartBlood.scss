@@ -1,0 +1,15 @@
+@import "../../../../assets/styles/variables";
+@import "../../../../assets/styles/mixins";
+.contener__blood{
+    @include flex-column-center;
+    // margin-top: 56px;
+    padding: 80px;
+    gap: 34px;
+    position: absolute;
+    width: 1140px;
+    height: 719px;
+    left: 390px;
+    top: 544px;
+    background: $white;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.24);
+}

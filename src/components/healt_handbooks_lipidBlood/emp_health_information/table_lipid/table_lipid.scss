@@ -1,0 +1,43 @@
+@import "../../../../assets/styles/variables";
+@import "../../../../assets/styles/mixins";
+.box__table{
+    @include flex-column-item-center;
+    padding: 80px 390px 160px;
+    gap: 40px;
+    width: 1920px;
+    height: 607px;
+    background: #FCF7F3;
+    &__title{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 40px;
+        width: 1140px;
+        height: 75px;
+        &__left{
+            width: 934px;
+            height: 75px;
+            &__p{
+                @include font-family-workSans;
+                @include font-style(64px,500,$secondary-default);
+                line-height: 75px;
+                letter-spacing: -0.04em;
+            }
+        }
+        &__right{
+            width: 206px;
+            height: 75px;
+            &__p{
+                width: 134px;
+                height: 14px;
+                @include font-family-workSans;
+                @include font-style(12px,600,$color-900);
+                line-height: 14px;
+                text-decoration-line: underline;
+
+            }
+        }
+    }
+}

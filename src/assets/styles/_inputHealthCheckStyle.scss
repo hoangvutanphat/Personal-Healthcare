@@ -1,0 +1,40 @@
+.attached-file {
+  padding: 16px;
+  height: 72px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  /* Pastel/Orange */
+
+  background: #fcf7f3;
+  border-radius: 100px;
+  .img-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    /* Orange */
+
+    background: #f2994a;
+    border-radius: 100px;
+    img {
+      width: 16px;
+      height: 20px;
+    }
+  }
+  span {
+    font-family: "Work Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+
+    /* Gray 900 */
+
+    color: #000000;
+  }
+}

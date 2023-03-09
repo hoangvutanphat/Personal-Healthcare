@@ -1,0 +1,83 @@
+.medical-consultation-container {
+  margin: 40px 0;
+  .ant-tabs-nav {
+    margin-bottom: 60px;
+    width: 100%;
+  }
+  .ant-tabs-ink-bar {
+    background-color: #4ad143 !important;
+  }
+  .ant-tabs-nav-list {
+    width: 100%;
+    .ant-tabs-tab {
+      width: 50%;
+      justify-content: center;
+      .title-tabs {
+        width: 100%;
+        /* Big body/Bold */
+        font-family: "Work Sans";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 21px;
+        text-align: center;
+        letter-spacing: -0.04em;
+
+        /* Primary/Default */
+
+        color: #4ad143;
+      }
+    }
+  }
+}
+.show-consultation-disease {
+  .ant-collapse-header-text{
+    max-width: 90%;
+  }
+  .disease-name {
+    box-sizing: border-box;
+
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 16px;
+    gap: 10px;
+
+    /* 900 (Title) */
+
+    border: 1px solid #1b211a;
+    border-radius: 1000px;
+    p {
+      /* H4 */
+
+      font-family: "Work Sans";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 28px;
+      letter-spacing: -0.04em;
+
+      /* 900 (Title) */
+
+      color: #1b211a;
+    }
+  }
+  .ant-collapse
+    > .ant-collapse-item
+    > .ant-collapse-header
+    .ant-collapse-header-text {
+    flex: none !important;
+  }
+  .site-collapse-custom-collapse {
+    background: none;
+  }
+  .site-collapse-custom-panel {
+    padding: 40px;
+    background: #f1f9f0;
+    border-radius: 24px !important;
+    border-bottom: none;
+    margin-bottom: 40px;
+  }
+}

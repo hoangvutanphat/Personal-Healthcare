@@ -1,0 +1,85 @@
+@import "../../../assets/styles/variables";
+@import "../../../assets/styles/mixins";
+
+.indexOption-container {
+  @include flex-column-start();
+  padding-top: 24px;
+  padding-left: 20px;
+  width: 13.5%;
+  height: 236px;
+  background: #ffffff;
+  box-shadow: 0px 100px 309px rgba(210, 208, 225, 0.24),
+    0px 41.7776px 129.093px rgba(210, 208, 225, 0.172525),
+    0px 22.3363px 69.0192px rgba(210, 208, 225, 0.143066),
+    0px 12.5216px 38.6916px rgba(210, 208, 225, 0.12),
+    0px 6.6501px 20.5488px rgba(210, 208, 225, 0.0969343),
+    0px 2.76726px 8.55082px rgba(210, 208, 225, 0.0674749);
+  border-radius: 12px;
+  .indexInfo {
+    @include flex-column-start();
+    padding: 0px;
+    gap: 14px;
+    &__title {
+      min-height: 40px;
+      font-family: "Inter";
+      font-style: normal;
+      line-height: 16px;
+      @include font-style(14px, 400, $grey-8);
+    }
+    &__value {
+      @include flex-column-start();
+      padding: 0px;
+      gap: 9px;
+      &--value {
+        font-family: "Inter";
+        font-style: normal;
+        // line-height: 18px;
+        // @include flex-item-center();
+        display: flex;
+        flex-direction: column;
+        line-height: 22px;
+        @include font-style(17px, 600, $grey-8);
+        .index {
+          display: flex;
+          .index-title {
+            font-size: 0.75em;
+            margin-right: 10px;
+          }
+          .index-value {
+            color: #4ad143;
+          }
+        }
+      }
+      &--percent {
+        height: 16px;
+        font-family: "Inter";
+        font-style: normal;
+        line-height: 16px;
+        @include font-style(14px, 600, $accents-red);
+      }
+    }
+  }
+  .chartInfo {
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    &__bar {
+      height: 60px;
+      width: 4.87px;
+      background: #ffffff;
+      border-radius: 100px;
+      &--process {
+        height: 31px;
+        width: 100%;
+        background: #4ad143;
+        box-shadow: 0px 100px 80px rgba(4, 153, 7, 0.24),
+          0px 41.7776px 33.4221px rgba(4, 153, 7, 0.172525),
+          0px 22.3363px 17.869px rgba(4, 153, 7, 0.143066),
+          0px 12.5216px 10.0172px rgba(4, 153, 7, 0.12),
+          0px 6.6501px 5.32008px rgba(4, 153, 7, 0.0969343),
+          0px 2.76726px 2.21381px rgba(4, 153, 7, 0.0674749);
+        border-radius: 10px;
+      }
+    }
+  }
+}

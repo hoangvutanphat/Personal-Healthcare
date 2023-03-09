@@ -1,0 +1,51 @@
+
+@import "../../../assets/styles/mixins";
+@import "../../../assets/styles/variables";
+.ant-table-thead {
+  .ant-table-cell {
+    background: $pastel-red;
+    width: 513px;
+    height: 16px;
+    @include font-family-workSans();
+    @include font-style(14px, 600, $black);
+    line-height: 16px;
+    text-align: center;
+  }
+}
+.ant-table-tbody {
+  tr:nth-child(even) {
+    background: $color-100;
+  }
+  tr {
+    td {
+      a {
+        width: 336px;
+        height: 16px;
+        @include font-family-workSans();
+        @include font-style(14px, 400, $grey-600 !important);
+        line-height: 16px;
+        text-align: center;
+      }
+    }
+    &:hover {
+      background-color: none !important;
+    }
+  }
+}
+
+.ant-table-thead {
+  .ant-table-cell {
+    background: $pastel-red;
+    border: 1px solid white;
+  }
+}
+.ant-table-tbody {
+  .ant-table-cell {
+    border: 1px solid white;
+  }
+}
+.ant-table-thead
+  > tr
+  > th:not(:last-child):not(.ant-table-selection-column):not(.ant-table-row-expand-icon-cell):not([colspan])::before {
+  background: none !important;
+}

@@ -1,0 +1,43 @@
+{
+  "general": {
+    "msgWelcome": "Chào mừng bạn đến với Novasquare",
+    "lblCopyright": "Bản quyền thuộc về",
+    "ipSearch": "Tìm kiếm",
+    "ctSelect": "Chọn Quốc gia",
+    "citySelect": "Chọn tỉnh/thành",
+    "dtSelect": "Chọn quận/huyện",
+    "mesDelete": "Bạn có chắc muốn xóa mục này?",
+    "cantRestore": "Bạn không thể khôi phục mục này!",
+    "button": {
+      "btnOk": "OK",
+      "btnOpen": "Open",
+      "btnCreate": "Create",
+      "btnUpdate": "Update",
+      "btnCancel": "Cancel",
+      "btnClose": "Close",
+      "btnEdit": "Edit",
+      "btnDelete": "Delete",
+      "btnSearch": "Search",
+      "btnViewMore": "View More",
+      "btnAdd": "Add",
+      "btnSend": "Send",
+      "btnContactUs": "Contact Us",
+      "btnTryNow": "Try Now",
+      "btnClear": "Clear"
+    }
+  },
+  "menu": {
+    "lblHome": "Trang chủ",
+    "healthHandBook": {
+      "title": "Sổ Tay Sức Khoẻ",
+      "lblEmpHealthInfor": "Thông tin sức khỏe nhân viên",
+      "lblInputPhysicalExamResult": "Kết quả KSK đầu vào",
+      "lblPeriodicPhysicalExamResult": "Kết quả KSK định kỳ",
+      "lblPhysicalExamResult": "Kết quả KSK (Tự khám/ Gói Đặc Biệt)",
+      "lblPhysicalExamResultForToxic": "Kết quả khám sức khỏe nặng nhọc độc hại",
+      "lblPhysicalExamResultForOccupational": "Kết quả khám sức khỏe bệnh nghề nghiệp",
+      "lblHealthConsultation": "Tư vấn sức khỏe dựa trên tình trạng bệnh lý",
+      "lblMedicalFacility": "Cơ sở khám chữa bệnh uy tín"
+    }
+  }
+}

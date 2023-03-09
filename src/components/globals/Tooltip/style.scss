@@ -1,0 +1,23 @@
+@import "../../../assets/styles/variables";
+@import "../../../assets/styles/mixins";
+
+.tooltip-container {
+  @include flex-column-start();
+  padding: 16px;
+  gap: 16px;
+  min-width: 300px;
+  h5 {
+    height: 16px;
+    @include font-family-workSans();
+    @include font-style(14px, 600, $color-700);
+    line-height: 16px;
+  }
+  p {
+    @include font-family-workSans();
+    @include font-style(12px, 400, $black);
+    line-height: 14px;
+  }
+}
+.ant-tooltip {
+  max-width: 500px;
+}

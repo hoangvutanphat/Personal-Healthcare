@@ -1,0 +1,27 @@
+.btn-medical-condition {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  gap: 16px;
+  height: 56px;
+
+  /* 700 (Body text) */
+
+  border: 1px solid #5a6159;
+  border-radius: 100px;
+  cursor: pointer;
+  span {
+    font-family: "Work Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    /* identical to box height */
+
+    /* 900 (Title) */
+
+    color: #1b211a;
+    margin-right: 10px;
+  }
+}

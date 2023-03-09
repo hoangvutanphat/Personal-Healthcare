@@ -1,0 +1,152 @@
+@import "../../../assets/styles/variables";
+@import "../../../assets/styles/mixins";
+
+.header {
+    height: 85px;
+    background: $white;
+    padding-left: 32px;
+    margin: 0;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__logo {
+        width: 82px;
+        height: 58px;
+    }
+
+    &__menu {
+        .navigation {
+            .menu-icon {
+                @include flex-center();
+                gap: 4px;
+            }
+            .menu.ant-menu-horizontal {
+                @include font-style(1rem, 600, $color-700);
+                line-height: 85px;
+                letter-spacing: -0.04em;
+                border: 1px solid transparent;
+            }
+            .anticon.anticon-down {
+                font-size: 0.75rem;
+            }
+        }
+    }
+    &__notification {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 24px;
+
+        .icon {
+            font-size: 16px;
+            &-grey {
+                color: $color-700;
+            }
+            &-white {
+                color: $white;
+            }
+        }
+        .user-account {
+            @include flex-center();
+            width: 250px;
+
+            padding: 28px 16px;
+            background: $primary-dark;
+
+            p {
+                @include font-style(16px, 400, $white);
+                line-height: 21px;
+            }
+        }
+    }
+}
+
+.ant-menu {
+    .ant-menu-submenu a,
+    .ant-menu-item a {
+        @include font-style(14px, 600, $color-700);
+    }
+    .ant-menu-item:hover a,
+    .ant-menu-submenu:hover a,
+    .ant-menu-item-active a,
+    .ant-menu-submenu-active a,
+    .ant-menu-item-open a,
+    .ant-menu-submenu-open a,
+    .ant-menu-item-selected a,
+    .ant-menu-submenu-selected a,
+    .ant-menu-submenu-title:hover a {
+        color: $primary-dark !important;
+    }
+    .ant-menu-item-selected::after,
+    .ant-menu-submenu-selected::after,
+    .ant-menu-submenu-open::after,
+    .ant-menu-item:hover::after,
+    .ant-menu-submenu:hover::after,
+    .ant-menu-submenu-title:hover::after {
+        border-bottom: 3px solid $primary-dark !important;
+    }
+    .ant-menu-submenu-arrow::before,
+    .ant-menu-submenu-arrow::after {
+        background: $primary-dark !important;
+    }
+}
+
+div.ant-menu-submenu-placement-bottomLeft {
+    top: 86px !important;
+}
+
+.ant-dropdown {
+    top: 85px !important;
+}
+.link-color {
+    color: $accents-verdepom;
+}
+@media (min-width: 768px) {
+    .menu-btn {
+        margin-top: 20px;
+        display: none;
+    }
+    .horizontal-menu {
+        right: 10px;
+    }
+    .navigation {
+        width: 850px;
+    }
+}
+
+@media (max-width: 768px) {
+    .horizontal-menu {
+        margin-top: 10px;
+        display: none;
+    }
+    .menu-btn {
+        position: absolute;
+        left: 20px;
+        background: $primary-dark;
+
+        &:hover {
+            background: $primary-dark;
+            border-color: $color-700;
+        }
+    }
+    .header {
+        padding-left: 12px;
+        height: 65px;
+
+        &__notification {
+            gap: 16px;
+
+            .user-account {
+                width: 200px;
+                padding: 16px;
+                p {
+                    @include font-style(12px, 400, $white);
+                    line-height: 18px;
+                }
+            }
+        }
+    }
+}

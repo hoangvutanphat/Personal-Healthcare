@@ -1,0 +1,18 @@
+
+
+.container-heavy-toxic-pdf{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &-body{
+        width: 80%;
+    }
+}
+.col-download-pdf{
+    width: 30px;
+}
+.title{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}

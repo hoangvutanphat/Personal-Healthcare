@@ -1,0 +1,32 @@
+@import "../../assets/styles/mixins";
+@import "../../assets/styles/variables";
+
+.page-breadcrumb {
+  width: 100%;
+  min-height: 56px;
+  margin: 0;
+  padding: 16px 42px;
+  border: 1px solid #f8f8f8;
+
+  .breadcrumb {
+    background: none;
+    li {
+      display: flex;
+      align-items: center;
+
+      .ant-breadcrumb-link {
+        @include font-style(16px, 400, $color-400);
+        line-height: 19px;
+      }
+      &:last-child {
+        .ant-breadcrumb-link {
+          color: $color-900;
+        }
+      }
+      .ant-breadcrumb-separator {
+        color: $color-900;
+        padding-bottom: 5px;
+      }
+    }
+  }
+}
