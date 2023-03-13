@@ -1,26 +1,33 @@
-import { useEffect } from "react";
-import { Route, Switch, useHistory, useLocation } from "react-router-dom";
-import { useRecoilState } from "recoil";
 import "./assets/styles/style.scss";
+
+import { Route, Switch, useHistory, useLocation } from "react-router-dom";
+
+import Chart from "./pages/SKCN/Chart";
+import Content from "./pages/content";
+import EatManage from "./pages/SKCN/Eat/EatManage";
+import EatMeal from "./pages/SKCN/Eat/EatMeal";
+import Excercise from "./pages/SKCN/Excercise";
 import Footer from "./components/globals/Footer";
-import Heading from "./components/globals/Heading";
-import { ROUTES } from "./constant/router";
-import { i18nConfig } from "./lib/Language";
 import ForgotPassword from "./pages/auth/forgot-password";
-import Login from "./pages/auth/login";
-import PDFFileExport from "./pages/health_handbook/emp_health_information/pdf_file_export";
-import PrediabetesRisk from "./pages/health_handbook/emp_health_information/prediabetes_risk";
-import { languageState } from "./recoil/atom/languageState";
-import { routes } from "./routers";
-import RouteWithSubRoutes from "./routers/RouteWithSubRoutes";
-import { useAuth } from "./hooks/auth";
-import ShowMedicalConsultation from "./components/meidcal_condition/show_medical_consultation/ShowMedicalConsultation";
+import Heading from "./components/globals/Heading";
 import HeavyToxicMedicalExaminationPDF from "./components/HealthHandbooks/HeavyToxicMedicalExaminationPDF";
-import OccupationalDiseasePDF from "../src/components/HealthHandbooks/OccupationalDiseaseMedicalExamination/OccupationalDiseasePDF";
-import PeriodicMedicalPDF from "./components/HealthHandbooks/PeriodicMedicalExamination/PeriodicMedicalPDF";
+import Login from "./pages/auth/login";
 import MedicalFacility from "./pages/health_handbook/medical-facility";
 import MedicalFacilityResult from "./components/HealthHandbooks/MedicalFacility/MedicalFacilityResult";
-import Content from "./pages/content";
+import OccupationalDiseasePDF from "../src/components/HealthHandbooks/OccupationalDiseaseMedicalExamination/OccupationalDiseasePDF";
+import PDFFileExport from "./pages/health_handbook/emp_health_information/pdf_file_export";
+import PeriodicMedicalPDF from "./components/HealthHandbooks/PeriodicMedicalExamination/PeriodicMedicalPDF";
+import PrediabetesRisk from "./pages/health_handbook/emp_health_information/prediabetes_risk";
+import Profile from "./pages/SKCN/Profile";
+import { ROUTES } from "./constant/router";
+import RouteWithSubRoutes from "./routers/RouteWithSubRoutes";
+import ShowMedicalConsultation from "./components/meidcal_condition/show_medical_consultation/ShowMedicalConsultation";
+import { i18nConfig } from "./lib/Language";
+import { languageState } from "./recoil/atom/languageState";
+import { routes } from "./routers";
+import { useAuth } from "./hooks/auth";
+import { useEffect } from "react";
+import { useRecoilState } from "recoil";
 
 function flatten(destArray, nodeList) {
   nodeList.forEach((node) => {
@@ -107,11 +114,25 @@ function App() {
               exact
               children={<MedicalFacilityResult />}
             />
+            <Route exact path="/excercise/:id">
+              <Excercise />
+            </Route>
+            <Route exact path="/profile">
+              <Profile />
+            </Route>
+            <Route exact path="/eat-meal">
+              <EatMeal/>
+            </Route>
+            <Route exact path="/eat-manage">
+              <EatManage/>
+            </Route>
+            <Route exact path="/chart">
+              <Chart />
+            </Route>
             <Route
-              path={`${ROUTES.CONTENT.patch}/:id`
-            }
-            exact
-            children={<Content/>}
+              path={`${ROUTES.CONTENT.patch}/:id`}
+              exact
+              children={<Content />}
             />
           </Switch>
           <Footer />

@@ -1,0 +1,53 @@
+@import '../../../assets/styles/variables';
+@import '../../../assets/styles/mixins';
+.wrapper {
+    width: 100%;
+    @include flex-center();
+    min-height: 50%;
+    justify-content: space-around;
+}
+.tittle {
+  margin-bottom: 48px;
+}
+.chart-container {
+    @include flex-between();
+    margin-top: 2%;
+    width: 80%;
+    flex-direction: column;
+    padding: 48px;
+}
+.chart {
+    flex: 1;
+    height: 100%;
+    width: 100%;
+}
+.state {
+    margin-bottom: 60px;
+    flex: 1;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.state__card {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    width: 40%;
+}
+
+.state__card__item {
+    @include flex-center();
+    flex-direction: column;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.state__card__item-data {
+    font-size: 24px;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+.state__card__item-label {
+    font-size: 18px;
+    font-weight: 400;
+}

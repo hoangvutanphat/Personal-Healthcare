@@ -1,0 +1,9 @@
+.meal {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+.meal__tittle {
+    margin-right: 12px;
+}
