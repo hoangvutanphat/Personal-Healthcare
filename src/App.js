@@ -28,6 +28,7 @@ import { routes } from "./routers";
 import { useAuth } from "./hooks/auth";
 import { useEffect } from "react";
 import { useRecoilState } from "recoil";
+import SmallLabel from "./components/globals/EmployeeInformation/SmallLabel";
 
 function flatten(destArray, nodeList) {
   nodeList.forEach((node) => {
@@ -67,87 +68,80 @@ function App() {
   flatten(menu, routes);
 
   return (
-    <div className="App">
-      {isLogged === "true" ? (
-        <>
-          <Heading />
-          <Switch>
-            {menu.map((route) => {
-              if (route.path === null) {
-                return 0;
-              }
-              return <RouteWithSubRoutes key={route.key} {...route} />;
-            })}
-            <Route
-              path={
-                ROUTES.HEALTH_HANDBOOK.EMPLOYEE_HEALTH_INFORMATION
-                  .PDF_FILE_EXPORT.path
-              }
-              exact
-              children={<PDFFileExport />}
-            />
-            <Route
-              path={
-                ROUTES.HEALTH_HANDBOOK.EMPLOYEE_HEALTH_INFORMATION
-                  .PREDIABETES_RISK.path
-              }
-              exact
-              children={<PrediabetesRisk />}
-            />
-            <Route
-              path={`${ROUTES.HEALTH_HANDBOOK.PERIODIC_MEDICAL_EXAMINATION.PDF_FILE_EXPORT.path}/:id`}
-              exact
-              children={<PeriodicMedicalPDF />}
-            />
-            <Route
-              path={`${ROUTES.HEALTH_HANDBOOK.OCCUPATIONAL_DISEASE_MEDICAL_EXAMINATION.PDF_FILE_EXPORT.path}/:id`}
-              exact
-              children={<OccupationalDiseasePDF />}
-            />
-            <Route
-              path={`${ROUTES.HEALTH_HANDBOOK.HEAVY_TOXIC_MEDICAL_EXAMINATION.HEAVY_TOXIC_MEDICAL_EXAMINATION_PDF.path}/:id`}
-              exact
-              children={<HeavyToxicMedicalExaminationPDF />}
-            />
-            <Route
-              path={`${ROUTES.HEALTH_HANDBOOK.MEDICAL_FACILITY.MEDICAL_FACILITY_RESULT.path}/:id`}
-              exact
-              children={<MedicalFacilityResult />}
-            />
-            <Route exact path="/excercise/:id">
-              <Excercise />
-            </Route>
-            <Route exact path="/profile">
-              <Profile />
-            </Route>
-            <Route exact path="/eat-meal">
-              <EatMeal/>
-            </Route>
-            <Route exact path="/eat-manage">
-              <EatManage/>
-            </Route>
-            <Route exact path="/chart">
-              <Chart />
-            </Route>
-            <Route
-              path={`${ROUTES.CONTENT.patch}/:id`}
-              exact
-              children={<Content />}
-            />
-          </Switch>
-          <Footer />
-        </>
-      ) : (
-        <Switch>
-          <Route exact path="/auth/login">
-            <Login />
-          </Route>
-          <Route exact path="/auth/forgot-password">
-            <ForgotPassword />
-          </Route>
-        </Switch>
-      )}
-    </div>
+      <div className="App">
+          {isLogged === 'true' ? (
+              <>
+                  <Heading />
+                  <Switch>
+                      {menu.map((route) => {
+                          if (route.path === null) {
+                              return 0;
+                          }
+                          return <RouteWithSubRoutes key={route.key} {...route} />;
+                      })}
+                      <Route
+                          path={ROUTES.HEALTH_HANDBOOK.EMPLOYEE_HEALTH_INFORMATION.PDF_FILE_EXPORT.path}
+                          exact
+                          children={<PDFFileExport />}
+                      />
+                      <Route
+                          path={ROUTES.HEALTH_HANDBOOK.EMPLOYEE_HEALTH_INFORMATION.PREDIABETES_RISK.path}
+                          exact
+                          children={<PrediabetesRisk />}
+                      />
+                      <Route
+                          path={`${ROUTES.HEALTH_HANDBOOK.PERIODIC_MEDICAL_EXAMINATION.PDF_FILE_EXPORT.path}/:id`}
+                          exact
+                          children={<PeriodicMedicalPDF />}
+                      />
+                      <Route
+                          path={`${ROUTES.HEALTH_HANDBOOK.OCCUPATIONAL_DISEASE_MEDICAL_EXAMINATION.PDF_FILE_EXPORT.path}/:id`}
+                          exact
+                          children={<OccupationalDiseasePDF />}
+                      />
+                      <Route
+                          path={`${ROUTES.HEALTH_HANDBOOK.HEAVY_TOXIC_MEDICAL_EXAMINATION.HEAVY_TOXIC_MEDICAL_EXAMINATION_PDF.path}/:id`}
+                          exact
+                          children={<HeavyToxicMedicalExaminationPDF />}
+                      />
+                      <Route
+                          path={`${ROUTES.HEALTH_HANDBOOK.MEDICAL_FACILITY.MEDICAL_FACILITY_RESULT.path}/:id`}
+                          exact
+                          children={<MedicalFacilityResult />}
+                      />
+                      <Route exact path="/excercise/:id">
+                          <Excercise />
+                      </Route>
+                      <Route exact path="/profile">
+                          <Profile />
+                      </Route>
+                      <Route exact path="/eat-meal">
+                          <EatMeal />
+                      </Route>
+                      <Route exact path="/eat-manage">
+                          <EatManage />
+                      </Route>
+                      <Route exact path="/chart">
+                          <Chart />
+                      </Route>
+                      <Route exact path="/a">
+                          <SmallLabel />
+                      </Route>
+                      <Route path={`${ROUTES.CONTENT.patch}/:id`} exact children={<Content />} />
+                  </Switch>
+                  <Footer />
+              </>
+          ) : (
+              <Switch>
+                  <Route exact path="/auth/login">
+                      <Login />
+                  </Route>
+                  <Route exact path="/auth/forgot-password">
+                      <ForgotPassword />
+                  </Route>
+              </Switch>
+          )}
+      </div>
   );
 }
 

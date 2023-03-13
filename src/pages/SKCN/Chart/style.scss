@@ -7,7 +7,7 @@
     justify-content: space-around;
 }
 .tittle {
-  margin-bottom: 48px;
+    margin-bottom: 48px;
 }
 .chart-container {
     @include flex-between();
@@ -22,7 +22,7 @@
     width: 100%;
 }
 .state {
-    margin-bottom: 60px;
+    margin-bottom: 48px;
     flex: 1;
     height: 100%;
     width: 100%;
@@ -50,4 +50,31 @@
 .state__card__item-label {
     font-size: 18px;
     font-weight: 400;
+}
+.history {
+    padding: 8px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 40px;
+    width: 100%;
+}
+.hisroty__item {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    padding: 8px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.hisroty__item__info {
+}
+.hisroty__item__info-name {
+    font-size: 18px;
+    font-weight: 500;
+}
+.hisroty__item__info-calories {
+}
+.hisroty__item-button{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    border-radius:99999px;
 }

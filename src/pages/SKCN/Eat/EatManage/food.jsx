@@ -3,17 +3,17 @@ import './style.scss';
 import * as Yup from 'yup';
 
 import { Avatar, Button, Card, Form, Input, InputNumber, Modal, Pagination, Select, Skeleton, Statistic, Switch } from 'antd';
-import { CheckCircleTwoTone, PlusOutlined, SettingOutlined, ArrowRightOutlined } from '@ant-design/icons';
+import { CheckCircleTwoTone, PlusOutlined, SettingOutlined } from '@ant-design/icons';
 import React, { useEffect, useState } from 'react';
 
+import label from 'material/src/component/label';
 import response from '../../../../utils/demo/foodData';
 import { useFormik } from 'formik';
-import { useHistory } from 'react-router-dom';
+
 const { Meta } = Card;
 const { Search } = Input;
 
-const EatMeal = () => {
-    const history = useHistory();
+const Food = () => {
     const [loading, setLoading] = useState(true);
     const [resutPerpage, setResutPerpage] = useState(12);
     const [page, setPage] = useState(1);
@@ -61,12 +61,16 @@ const EatMeal = () => {
             time: value.time,
         };
 
-        const addEatMeal = () => {
+        const addFood = () => {
             console.log(data);
         };
-        addEatMeal();
+        addFood();
         setModal2Open(false);
     };
+    const options = data?.map((res) => ({
+        value: res.foodName,
+        label: `${res.foodName} (${res.calories} calo)`,
+    }));
     return (
         <>
             <Modal
@@ -77,22 +81,7 @@ const EatMeal = () => {
                 onCancel={() => setModal1Open(false)}
             ></Modal>
             <div className="wrapper">
-                <h1 className="tittle">Tập luyện hằng ngày</h1>
-                <div className="meal">
-                    <h5 className="meal__tittle">Chọn bữa:</h5>
-
-                    <Select
-                        defaultValue="morning"
-                        style={{ width: 120 }}
-                        // onChange={handleChange}
-                        options={[
-                            { value: 'morning', label: 'Bữa sáng' },
-                            { value: 'lunch', label: 'Bữa trưa' },
-                            { value: 'dinner', label: 'Bữa tối' },
-                            { value: 'snacks', label: 'Bữa phụ' },
-                        ]}
-                    />
-                </div>
+                <h1 className="tittle">Món ăn</h1>
                 <div className="search">
                     <Search
                         placeholder="Tìm hoạt động"
@@ -114,19 +103,12 @@ const EatMeal = () => {
                             />
                         }
                     />
-                    <Button
-                        size="middle"
-                        className="search__button"
-                        type="primary"
-                        onClick={() => {
-                            history.push('/eat-manage');
-                        }}
-                    >
-                        Quản lý món ăn
-                        <ArrowRightOutlined />
+                    <Button size="middle" className="search__button" type="primary" onClick={() => setModal2Open(true)}>
+                        Thêm món ăn
+                        <PlusOutlined />
                     </Button>
-                    {/* <Modal
-                        title="Quản lý món ăn"
+                    <Modal
+                        title="Thêm món ăn"
                         centered
                         open={modal2Open}
                         okButtonProps={{
@@ -135,6 +117,7 @@ const EatMeal = () => {
                             htmlType: 'submit',
                         }}
                         onCancel={() => setModal2Open(false)}
+                        width={1000}
                     >
                         <Form
                             id="ex-editor-form"
@@ -149,17 +132,21 @@ const EatMeal = () => {
                             size="large"
                             className="mt-4"
                         >
-                            <Form.Item label="Tiêu đề" name="tittle">
+                            <Form.Item label="Tên món ăn" name="tittle">
                                 <Input />
                             </Form.Item>
-                            <Form.Item label="kcal" name="calories">
-                                <InputNumber />
-                            </Form.Item>
-                            <Form.Item label="Thời gian" name="time">
-                                <InputNumber />
+                            <Form.Item label="Danh sách thực phẩm" name="calories">
+                                <Select
+                                    mode="multiple"
+                                    placeholder="Please select"
+                                    style={{
+                                        width: '100%',
+                                    }}
+                                    options={options}
+                                />
                             </Form.Item>
                         </Form>
-                    </Modal> */}
+                    </Modal>
                 </div>
                 <div className="container">
                     {data?.map((foodItem) => (
@@ -196,4 +183,4 @@ const EatMeal = () => {
     );
 };
 
-export default EatMeal;
+export default Food;

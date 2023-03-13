@@ -3,17 +3,16 @@ import './style.scss';
 import * as Yup from 'yup';
 
 import { Avatar, Button, Card, Form, Input, InputNumber, Modal, Pagination, Select, Skeleton, Statistic, Switch } from 'antd';
-import { CheckCircleTwoTone, PlusOutlined, SettingOutlined, ArrowRightOutlined } from '@ant-design/icons';
+import { CheckCircleTwoTone, PlusOutlined, SettingOutlined } from '@ant-design/icons';
 import React, { useEffect, useState } from 'react';
 
 import response from '../../../../utils/demo/foodData';
 import { useFormik } from 'formik';
-import { useHistory } from 'react-router-dom';
+
 const { Meta } = Card;
 const { Search } = Input;
 
-const EatMeal = () => {
-    const history = useHistory();
+const FoodItem = () => {
     const [loading, setLoading] = useState(true);
     const [resutPerpage, setResutPerpage] = useState(12);
     const [page, setPage] = useState(1);
@@ -61,10 +60,10 @@ const EatMeal = () => {
             time: value.time,
         };
 
-        const addEatMeal = () => {
+        const addFoodItem = () => {
             console.log(data);
         };
-        addEatMeal();
+        addFoodItem();
         setModal2Open(false);
     };
     return (
@@ -77,22 +76,7 @@ const EatMeal = () => {
                 onCancel={() => setModal1Open(false)}
             ></Modal>
             <div className="wrapper">
-                <h1 className="tittle">Tập luyện hằng ngày</h1>
-                <div className="meal">
-                    <h5 className="meal__tittle">Chọn bữa:</h5>
-
-                    <Select
-                        defaultValue="morning"
-                        style={{ width: 120 }}
-                        // onChange={handleChange}
-                        options={[
-                            { value: 'morning', label: 'Bữa sáng' },
-                            { value: 'lunch', label: 'Bữa trưa' },
-                            { value: 'dinner', label: 'Bữa tối' },
-                            { value: 'snacks', label: 'Bữa phụ' },
-                        ]}
-                    />
-                </div>
+                <h1 className="tittle">Thực phẩm</h1>
                 <div className="search">
                     <Search
                         placeholder="Tìm hoạt động"
@@ -114,19 +98,12 @@ const EatMeal = () => {
                             />
                         }
                     />
-                    <Button
-                        size="middle"
-                        className="search__button"
-                        type="primary"
-                        onClick={() => {
-                            history.push('/eat-manage');
-                        }}
-                    >
-                        Quản lý món ăn
-                        <ArrowRightOutlined />
+                    <Button size="middle" className="search__button" type="primary" onClick={() => setModal2Open(true)}>
+                        Thêm thực phẩm
+                        <PlusOutlined />
                     </Button>
-                    {/* <Modal
-                        title="Quản lý món ăn"
+                    <Modal
+                        title="Thêm thực phẩm"
                         centered
                         open={modal2Open}
                         okButtonProps={{
@@ -135,6 +112,7 @@ const EatMeal = () => {
                             htmlType: 'submit',
                         }}
                         onCancel={() => setModal2Open(false)}
+                        width={1000}
                     >
                         <Form
                             id="ex-editor-form"
@@ -149,17 +127,30 @@ const EatMeal = () => {
                             size="large"
                             className="mt-4"
                         >
-                            <Form.Item label="Tiêu đề" name="tittle">
+                            <Form.Item label="Tên thực phẩm" name="tittle">
                                 <Input />
                             </Form.Item>
-                            <Form.Item label="kcal" name="calories">
-                                <InputNumber />
+                            <Form.Item label="Chọn khẩu phần ăn" name="tittle">
+                                <Select
+                                    defaultValue="lucy"
+                                    style={{ width: 240 }}
+                                    options={[
+                                        { value: 'jack', label: 'phần ăn (100g)' },
+                                        { value: 'lucy', label: 'muỗng cà phê (tsp)' },
+                                        { value: 'Yiminghe', label: 'muỗng canh (Tbsp)' },
+                                        { value: 'Yiminghe', label: 'cốc (cup)' },
+                                    ]}
+                                />
                             </Form.Item>
-                            <Form.Item label="Thời gian" name="time">
+                            <Form.Item label="1 khẩu phần ăn" name="calories">
+                                <InputNumber />
+                                {'  '}g
+                            </Form.Item>
+                            <Form.Item label="Kcals" name="time">
                                 <InputNumber />
                             </Form.Item>
                         </Form>
-                    </Modal> */}
+                    </Modal>
                 </div>
                 <div className="container">
                     {data?.map((foodItem) => (
@@ -196,4 +187,4 @@ const EatMeal = () => {
     );
 };
 
-export default EatMeal;
+export default FoodItem;
