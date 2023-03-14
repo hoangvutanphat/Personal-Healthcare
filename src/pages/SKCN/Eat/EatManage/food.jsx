@@ -148,12 +148,13 @@ const Food = () => {
                         </Form>
                     </Modal>
                 </div>
-                <div className="container">
+                <div className="container-chart">
                     {data?.map((foodItem) => (
                         <Card
                             style={{
                                 width: 300,
                                 marginTop: 16,
+                                'box-shadow': 'rgba(0, 0, 0, 0.1) 0px 4px 12px',
                             }}
                             actions={[<PlusOutlined />, <SettingOutlined onClick={() => setModal1Open(true)} />, <CheckCircleTwoTone />]}
                         >

@@ -2,13 +2,14 @@ import './style.scss';
 
 import * as Yup from 'yup';
 
+import { ArrowRightOutlined, CheckCircleTwoTone, PlusOutlined, SettingOutlined } from '@ant-design/icons';
 import { Avatar, Button, Card, Form, Input, InputNumber, Modal, Pagination, Select, Skeleton, Statistic, Switch } from 'antd';
-import { CheckCircleTwoTone, PlusOutlined, SettingOutlined, ArrowRightOutlined } from '@ant-design/icons';
 import React, { useEffect, useState } from 'react';
 
 import response from '../../../../utils/demo/foodData';
 import { useFormik } from 'formik';
 import { useHistory } from 'react-router-dom';
+
 const { Meta } = Card;
 const { Search } = Input;
 
@@ -77,7 +78,7 @@ const EatMeal = () => {
                 onCancel={() => setModal1Open(false)}
             ></Modal>
             <div className="wrapper">
-                <h1 className="tittle">Tập luyện hằng ngày</h1>
+                <h1 className="tittle">Bữa ăn</h1>
                 <div className="meal">
                     <h5 className="meal__tittle">Chọn bữa:</h5>
 
@@ -161,12 +162,13 @@ const EatMeal = () => {
                         </Form>
                     </Modal> */}
                 </div>
-                <div className="container">
+                <div className="container-chart">
                     {data?.map((foodItem) => (
                         <Card
                             style={{
                                 width: 300,
                                 marginTop: 16,
+                                'box-shadow': 'rgba(0, 0, 0, 0.1) 0px 4px 12px',
                             }}
                             actions={[<PlusOutlined />, <SettingOutlined onClick={() => setModal1Open(true)} />, <CheckCircleTwoTone />]}
                         >

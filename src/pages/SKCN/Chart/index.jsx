@@ -1,12 +1,16 @@
 import './style.scss';
 
-import { Button, Card, Collapse, Divider, Progress, Select, Tabs } from 'antd';
+import { Button, Card, Collapse, DatePicker, Divider, Progress, Select, Tabs } from 'antd';
 import { CloseOutlined, SettingOutlined } from '@ant-design/icons';
-import { DualAxes, Liquid } from '@ant-design/charts';
+import { DualAxes, Line, Liquid } from '@ant-design/charts';
 import { useEffect, useState } from 'react';
 
 import BMIApi from '../../../api/bmiApi';
 import bloodPressureApi from '../../../api/bloodPressureApi';
+import customParseFormat from 'dayjs/plugin/customParseFormat';
+import dayjs from 'dayjs';
+
+dayjs.extend(customParseFormat);
 
 function Chart() {
     const onChange = (key) => {
@@ -28,27 +32,27 @@ function Chart() {
         <>
             <div className="wrapper">
                 <div className="chart-container">
-                    <h1 className="tittle">Tổng quan sức khoẻ</h1>
+                    <h1 className="tittle-chart">Tổng quan sức khoẻ</h1>
                     <div className="state">
                         <div className="state__card">
                             <div className="state__card__item">
-                                <div className="state__card__item-data">2300</div>
+                                <div className="state__card__item-data">2650</div>
                                 <span className="state__card__item-label">Đã nạp</span>
                             </div>
                             {/* <Liquid {...configLiquid} /> */}
                             <Progress
                                 type="circle"
-                                percent={(2300 / 3000) * 100}
+                                percent={(2300 / 2723) * 100}
                                 format={(percent) => (
                                     <>
-                                        <div className="state__card__item-data">{3000 - 2700}</div>
+                                        <div className="state__card__item-data">{2723 - 2650 + 654}</div>
                                         <span className="state__card__item-label">Cần nạp</span>
                                     </>
                                 )}
                                 size={150}
                             />
                             <div className="state__card__item">
-                                <div className="state__card__item-data">300</div>
+                                <div className="state__card__item-data">654</div>
                                 <span className="state__card__item-label">Đã tiêu hao</span>
                             </div>
                         </div>
@@ -62,89 +66,163 @@ function Chart() {
     );
 }
 function ChartLine() {
-    
-    const getBloodPressure = async (id, callback) => {
-        try {
-            let res = await BMIApi.getBMIById(id);
-            if (res.data) {
-            }
-        } catch (error) {
-
-        }
-    };
-
-    getBloodPressure(990)
+    // const getBloodPressure = async (id, callback) => {
+    //     try {
+    //         let res = await BMIApi.getBMIById(id);
+    //         if (res.data) {
+    //         }
+    //     } catch (error) {}
+    // };
     const data = [
         {
-            year: '1991',
-            value: 3,
-            count: 10,
+            date: '2023/3/1',
+            type: 'TDEE',
+            Calo: 2723,
         },
         {
-            year: '1992',
-            value: 4,
-            count: 4,
+            date: '2023/3/1',
+            type: 'Calo/ngày',
+            Calo: 2203,
         },
         {
-            year: '1993',
-            value: 3.5,
-            count: 5,
+            date: '2023/3/2',
+            type: 'TDEE',
+            Calo: 2723,
         },
         {
-            year: '1994',
-            value: 5,
-            count: 5,
+            date: '2023/3/2',
+            type: 'Calo/ngày',
+            Calo: 2016,
         },
         {
-            year: '1995',
-            value: 4.9,
-            count: 4.9,
+            date: '2023/3/3',
+            type: 'TDEE',
+            Calo: 2723,
         },
         {
-            year: '1996',
-            value: 6,
-            count: 35,
+            date: '2023/3/3',
+            type: 'Calo/ngày',
+            Calo: 2916,
         },
         {
-            year: '1997',
-            value: 7,
-            count: 7,
+            date: '2023/3/4',
+            type: 'TDEE',
+            Calo: 2723,
         },
         {
-            year: '1998',
-            value: 9,
-            count: 1,
+            date: '2023/3/4',
+            type: 'Calo/ngày',
+            Calo: 2512,
         },
         {
-            year: '1999',
-            value: 13,
-            count: 20,
+            date: '2023/3/5',
+            type: 'TDEE',
+            Calo: 2723,
+        },
+        {
+            date: '2023/3/5',
+            type: 'Calo/ngày',
+            Calo: 3231,
+        },
+        {
+            date: '2023/3/6',
+            type: 'TDEE',
+            Calo: 2723,
+        },
+        {
+            date: '2023/3/6',
+            type: 'Calo/ngày',
+            Calo: 2003,
+        },
+        {
+            date: '2023/3/7',
+            type: 'TDEE',
+            Calo: 2723,
+        },
+        {
+            date: '2023/3/7',
+            type: 'Calo/ngày',
+            Calo: 1963,
+        },
+        {
+            date: '2023/3/8',
+            type: 'TDEE',
+            Calo: 2723,
+        },
+        {
+            date: '2023/3/8',
+            type: 'Calo/ngày',
+            Calo: 3367,
+        },
+        {
+            date: '2023/3/9',
+            type: 'TDEE',
+            Calo: 2723,
+        },
+        {
+            date: '2023/3/9',
+            type: 'Calo/ngày',
+            Calo: 2956,
+        },
+        {
+            date: '2023/3/10',
+            type: 'TDEE',
+            Calo: 2723,
+        },
+        {
+            date: '2023/3/10',
+            type: 'Calo/ngày',
+            Calo: 1673,
+        },
+        {
+            date: '2023/3/11',
+            type: 'TDEE',
+            Calo: 2723,
+        },
+        {
+            date: '2023/3/11',
+            type: 'Calo/ngày',
+            Calo: 2923,
         },
     ];
     const configLine = {
-        autoFit: true,
-        data: [data, data],
-        xField: 'year',
-        yField: ['value', 'count'],
-        geometryOptions: [
-            {
-                geometry: 'line',
-                color: '#5B8FF9',
+        data,
+        xField: 'date',
+        yField: 'Calo',
+        yAxis: {
+            label: {
+                formatter: (v) => `${v}`.replace(/\d{1,3}(?=(\d{3})+$)/g, (s) => `${s},`),
             },
-            {
-                geometry: 'line',
-                color: '#5AD8A6',
-            },
-        ],
+        },
+        seriesField: 'type',
+        color: ({ type }) => {
+            return type === 'Calo/ngày' ? '#1890ff' : type === 'TDEE' ? '#30BF73' : '#FAAD14';
+        },
+        lineStyle: ({ type }) => {
+            if (type === 'TDEE') {
+                return {
+                    lineDash: [4, 4],
+                    opacity: 1,
+                };
+            }
+
+            return {
+                opacity: 0.5,
+            };
+        },
     };
-    return <DualAxes {...configLine} />;
+    const dateFormat = 'YYYY/MM/DD';
+    return (
+        <>
+            <Date />
+            <Line {...configLine} />
+        </>
+    );
 }
 
 const { Panel } = Collapse;
 const text = `
-  A dog is a type of domesticated animal.
-  Known for its loyalty and faithfulness,
-  it can be found as a welcome guest in many households across the world.
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 `;
 const History = () => {
     const onChange = (key) => {
@@ -152,7 +230,18 @@ const History = () => {
     };
     return (
         <>
-            <Collapse defaultActiveKey={['1', '2', '3', '4']} onChange={onChange} expandIconPosition={'end'}>
+            <div style={{ display: 'flex', 'justify-content': 'flex-end', width: '100%',margin:'0 60px 20px 0' }}>
+                <DatePicker
+                    presets={[
+                        { label: 'Yesterday', value: dayjs().add(-1, 'd') },
+                        { label: 'Last Week', value: dayjs().add(-7, 'd') },
+                        { label: 'Last Month', value: dayjs().add(-1, 'month') },
+                    ]}
+                    onChange={onChange}
+                />
+            </div>
+
+            <Collapse defaultActiveKey={['1']} onChange={onChange} expandIconPosition={'end'}>
                 <Panel header="Bữa sáng" key="1">
                     <div className="history">
                         <div className="hisroty__item">
@@ -217,3 +306,15 @@ const History = () => {
 };
 
 export default Chart;
+
+dayjs.extend(customParseFormat);
+const { RangePicker } = DatePicker;
+const dateFormat = 'YYYY/MM/DD';
+const customFormat = (value) => `custom format: ${value.format(dateFormat)}`;
+const Date = () => (
+    <>
+        <div style={{ display: 'flex', 'justify-content': 'flex-end', width: '100%' }}>
+            <RangePicker defaultValue={[dayjs('2015/01/01', dateFormat), dayjs('2015/01/01', dateFormat)]} format={dateFormat} />
+        </div>
+    </>
+);

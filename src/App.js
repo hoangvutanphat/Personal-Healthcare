@@ -22,13 +22,14 @@ import Profile from "./pages/SKCN/Profile";
 import { ROUTES } from "./constant/router";
 import RouteWithSubRoutes from "./routers/RouteWithSubRoutes";
 import ShowMedicalConsultation from "./components/meidcal_condition/show_medical_consultation/ShowMedicalConsultation";
+import SmallLabel from "./components/globals/EmployeeInformation/SmallLabel";
+import UpdateInfor from "./pages/SKCN/Profile/update";
 import { i18nConfig } from "./lib/Language";
 import { languageState } from "./recoil/atom/languageState";
 import { routes } from "./routers";
 import { useAuth } from "./hooks/auth";
 import { useEffect } from "react";
 import { useRecoilState } from "recoil";
-import SmallLabel from "./components/globals/EmployeeInformation/SmallLabel";
 
 function flatten(destArray, nodeList) {
   nodeList.forEach((node) => {
@@ -124,8 +125,8 @@ function App() {
                       <Route exact path="/chart">
                           <Chart />
                       </Route>
-                      <Route exact path="/a">
-                          <SmallLabel />
+                      <Route exact path="/update-info">
+                          <UpdateInfor />
                       </Route>
                       <Route path={`${ROUTES.CONTENT.patch}/:id`} exact children={<Content />} />
                   </Switch>
