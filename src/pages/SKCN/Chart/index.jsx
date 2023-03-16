@@ -6,6 +6,7 @@ import { DualAxes, Line, Liquid } from '@ant-design/charts';
 import { useEffect, useState } from 'react';
 
 import BMIApi from '../../../api/bmiApi';
+import TDEE from './tdee';
 import bloodPressureApi from '../../../api/bloodPressureApi';
 import customParseFormat from 'dayjs/plugin/customParseFormat';
 import dayjs from 'dayjs';
@@ -26,6 +27,11 @@ function Chart() {
             key: '2',
             label: `Nhật ký `,
             children: <History />,
+        },
+        {
+            key: '3',
+            label: `TDEE`,
+            children: <TDEE />,
         },
     ];
     return (
@@ -230,7 +236,7 @@ const History = () => {
     };
     return (
         <>
-            <div style={{ display: 'flex', 'justify-content': 'flex-end', width: '100%',margin:'0 60px 20px 0' }}>
+            <div style={{ display: 'flex', 'justify-content': 'flex-end', width: '100%', margin: '0 60px 20px 0' }}>
                 <DatePicker
                     presets={[
                         { label: 'Yesterday', value: dayjs().add(-1, 'd') },

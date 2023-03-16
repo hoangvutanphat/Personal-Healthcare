@@ -86,8 +86,8 @@ const FoodItem = () => {
                         onSearch={handleSearch}
                     />
                 </div>
-                <div className="action">
-                    <Statistic
+                <div className="action-food">
+                    {/* <Statistic
                         title="Số calo đã tiêu hao "
                         value={112893}
                         // formatter={formatter}
@@ -97,7 +97,7 @@ const FoodItem = () => {
                                 className="action__img"
                             />
                         }
-                    />
+                    /> */}
                     <Button size="middle" className="search__button" type="primary" onClick={() => setModal2Open(true)}>
                         Thêm thực phẩm
                         <PlusOutlined />

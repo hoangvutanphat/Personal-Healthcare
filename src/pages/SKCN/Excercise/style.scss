@@ -5,6 +5,7 @@
     @include flex-center();
     flex-direction: column;
     min-height: 50%;
+    padding-top: 1%;
 }
 .search {
     width: 40%;
@@ -18,6 +19,11 @@
     margin-top: 1%;
     width: 30%;
     @include flex-between();
+}
+.action-food{
+    margin-top: 1%;
+    width: 30%;
+    @include flex-center();
 }
 .action__img {
     width: 32px;
