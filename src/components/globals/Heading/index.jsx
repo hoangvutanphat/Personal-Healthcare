@@ -82,24 +82,24 @@ const Heading = () => {
             ),
             key: '0',
         },
-        {
-            label: (
-                <Link to={`/excercise/${auth?.profile?.id}`} className="nav-link tx-16">
-                    <span>Excercise</span>
-                </Link>
-            ),
-            key: '1',
-            //   icon: <UserOutlined />
-        },
-        {
-            label: (
-                <Link to={`/eat-meal`} className="nav-link tx-16">
-                    <span>Eat</span>
-                </Link>
-            ),
-            key: '2',
-            //   icon: <UserOutlined />
-        },
+        // {
+        //     label: (
+        //         <Link to={`/excercise/${auth?.profile?.id}`} className="nav-link tx-16">
+        //             <span>Excercise</span>
+        //         </Link>
+        //     ),
+        //     key: '1',
+        //     //   icon: <UserOutlined />
+        // },
+        // {
+        //     label: (
+        //         <Link to={`/eat-meal`} className="nav-link tx-16">
+        //             <span>Eat</span>
+        //         </Link>
+        //     ),
+        //     key: '2',
+        //     //   icon: <UserOutlined />
+        // },
         {
             label: (
                 <Link to={`/profile`} className="nav-link tx-16">
@@ -109,15 +109,15 @@ const Heading = () => {
             key: '3',
             //   icon: <UserOutlined />
         },
-        {
-            label: (
-                <Link to={`/chart`} className="nav-link tx-16">
-                    <span>Chart</span>
-                </Link>
-            ),
-            key: '4',
-            //   icon: <UserOutlined />
-        },
+        // {
+        //     label: (
+        //         <Link to={`/chart`} className="nav-link tx-16">
+        //             <span>Chart</span>
+        //         </Link>
+        //     ),
+        //     key: '4',
+        //     //   icon: <UserOutlined />
+        // },
         {
             type: 'divider',
         },

@@ -5,6 +5,7 @@
     @include flex-center();
     flex-direction: column;
     min-height: 50%;
+    padding-top: 1%;
 }
 .search {
     width: 40%;
@@ -19,6 +20,11 @@
     width: 30%;
     @include flex-between();
 }
+.action-food{
+    margin-top: 1%;
+    width: 30%;
+    @include flex-center();
+}
 .action__img {
     width: 32px;
     height: 32px;
@@ -30,7 +36,7 @@
     display: flex;
     align-items: center;
 }
-.container {
+.container-chart {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-gap: 10px;
